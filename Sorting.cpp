@@ -52,10 +52,18 @@ struct Node {
 
 //display values in the node.
 void print_list(Node* n) {
+	cout << "\nPrinting new list..." << endl;
 	while (n != NULL) {
 		cout << n->data << " ";
 		n = n->next;
 	}
+}
+
+void push(struct Node** head_ref, int new_data) {
+	struct Node* new_node = (struct Node*)malloc(sizeof(struct Node));
+	new_node->data = new_data;
+	new_node->next = (*head_ref);
+	(*head_ref) = new_node;
 }
 
 int main() {
@@ -81,6 +89,8 @@ int main() {
 	third->next = NULL;
 
 	
+	print_list(head);
+	push(&head, 0);
 	print_list(head);
 
 	
