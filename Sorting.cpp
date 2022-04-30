@@ -59,6 +59,7 @@ void print_list(Node* n) {
 	}
 }
 
+//adding a value to the front of the link list 
 void push(struct Node** head_ref, int new_data) {
 	struct Node* new_node = (struct Node*)malloc(sizeof(struct Node));
 	new_node->data = new_data;
