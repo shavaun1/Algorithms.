@@ -67,7 +67,38 @@ void push(struct Node** head_ref, int new_data) {
 	(*head_ref) = new_node;
 }
 
+
+/// <summary>
+// Recursion
+/// </summary>
+
+int fibonnaci(int x) {
+	if ((x == 1) || (x == 0)) {
+		return(x);
+	}
+	else {
+		return(fibonnaci(x - 1) + fibonnaci(x - 2));
+	}
+}
+
+
 int main() {
+
+
+	//recursion
+	int x, i = 0;
+	cout << "Enter the number of terms of series : ";
+	cin >> x;
+	cout << "\nFibonnaci Series : ";
+	while (i < x)
+	{
+		cout << " " << fibonnaci(i);
+		i++;
+
+	}
+
+
+#if 0
 
 	//creating the *link list*
 	Node* head = NULL;
@@ -93,6 +124,8 @@ int main() {
 	print_list(head);
 	push(&head, 0);
 	print_list(head);
+
+#endif
 
 	
 #if 0
